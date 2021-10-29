@@ -6,15 +6,16 @@ import { useForm } from 'react-hook-form';
 
 import useAuth from '../../hooks/useAuth';
 import './ServiceDetail.css';
-import { clearTheCart, getStoredCart } from '../../utilities/fakedb';
+import Shipping from '../Shipping/Shipping';
+/* import { clearTheCart, getStoredCart } from '../../utilities/fakedb'; */
 
 
 const ServiceDetail = () => {
-    const { id} = useParams();
+    const {_id} = useParams();
     const [service,setService] = useState( []);
-    const { register, handleSubmit,/* reset,   */ formState: { errors } } = useForm();
+    /* const { register, handleSubmit,reset,   formState: { errors } } = useForm(); */
 
-    const {user} = useAuth();
+   /*  const {user} = useAuth(); */
     // console.log(params);
     useEffect(()=>{
        
@@ -22,17 +23,17 @@ const ServiceDetail = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data)
-            const selected = data.find ( s => s.id == id)
+            const selected = data.find ( s => s._id == _id)
                console.log(selected) 
                
                setService(selected);
         });
     },[]);
-    const onSubmit = data => {
+    /* const onSubmit = data => {
         const savedCart = getStoredCart();
         data.order = savedCart;
 
-        fetch('https://afternoon-wave-38333.herokuapp.com/services', {
+        fetch('https://afternoon-wave-38333.herokuapp.com/orders', {
             method: 'POST',
             headers:{
                 'content-type': 'application/json'
@@ -41,19 +42,20 @@ const ServiceDetail = () => {
         })
         .then(res => res.json())
         .then(result =>{
-            // console.log(result);
+            console.log(result);
             if(result.insertedId){
                     alert('Order proccessed successfully')
-                    clearTheCart();
-                   /*  reset(); */
-            }
+                    clearTheCart(); */
+                    /* reset(); */
+         /*    }
         })
 
         console.log(data)
-    };
+    }; */
     return (
         <div className="service-detail">
-             <div>
+            <Shipping></Shipping>
+             {/* <div>
              <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
        
       <input defaultValue={user.displayName} {...register("name")} />
@@ -64,7 +66,7 @@ const ServiceDetail = () => {
       <input placeholder="phone number" defaultValue=" " {...register("phone")} />
       <input type="submit" />
     </form>
-        </div>
+        </div> */}
            <div className="service-img p-3">
             <img src={service.img}  alt="" />
             </div>

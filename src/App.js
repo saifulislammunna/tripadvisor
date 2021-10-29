@@ -29,14 +29,14 @@ function App() {
                           <Login></Login>
                   </Route>
 
-                  <PrivateRoute path="/service/:_id">
+                  <PrivateRoute path="/services/:_id">
                     <ServiceDetail></ServiceDetail>
                   </PrivateRoute>
 
                    <Route path="/myorders">
                       <MyOrders></MyOrders>
                    </Route>
-                   
+
                   <Route path="*">
                     <NotFound></NotFound>
                   </Route>

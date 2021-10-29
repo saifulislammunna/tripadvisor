@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 /* service component */
 const Service = (props) => {
     const {img,name,description,_id } = props.service;
-    const url = `/service/${_id}`;
+    const url = `/services/${_id}`;
      
     return (
        
