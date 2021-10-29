@@ -2,12 +2,19 @@ import React, { useEffect, useState } from 'react';
 import { Button  } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+
+import useAuth from '../../hooks/useAuth';
 import './ServiceDetail.css';
+import { clearTheCart, getStoredCart } from '../../utilities/fakedb';
 
 
 const ServiceDetail = () => {
     const { id} = useParams();
     const [service,setService] = useState( []);
+    const { register, handleSubmit,/* reset,   */ formState: { errors } } = useForm();
+
+    const {user} = useAuth();
     // console.log(params);
     useEffect(()=>{
        
@@ -20,9 +27,44 @@ const ServiceDetail = () => {
                
                setService(selected);
         });
-    },[])
+    },[]);
+    const onSubmit = data => {
+        const savedCart = getStoredCart();
+        data.order = savedCart;
+
+        fetch('https://afternoon-wave-38333.herokuapp.com/services', {
+            method: 'POST',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(result =>{
+            // console.log(result);
+            if(result.insertedId){
+                    alert('Order proccessed successfully')
+                    clearTheCart();
+                   /*  reset(); */
+            }
+        })
+
+        console.log(data)
+    };
     return (
         <div className="service-detail">
+             <div>
+             <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
+       
+      <input defaultValue={user.displayName} {...register("name")} />
+      <input defaultValue={user.email} {...register("email", { required: true })} />
+      {errors.email && <span className="error">This field is required</span>} 
+      <input placeholder="Address" defaultValue=" " {...register("address")} />
+      <input placeholder="city" defaultValue=" " {...register("city")} />
+      <input placeholder="phone number" defaultValue=" " {...register("phone")} />
+      <input type="submit" />
+    </form>
+        </div>
            <div className="service-img p-3">
             <img src={service.img}  alt="" />
             </div>
@@ -38,7 +80,7 @@ const ServiceDetail = () => {
             
                        <Link to="/home"  ><Button  className="btn  rounded-pill btn">
                   
-                 <span className="p-2 "> Detail</span></Button></Link>
+                 <span className="p-2 "> Book Now</span></Button></Link>
            </div>
             
            

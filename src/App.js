@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
+import MyOrders from './components/MyOrders/MyOrders';
 import NotFound from './components/NotFound/NotFound';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import ServiceDetail from './components/ServiceDetail/ServiceDetail';
@@ -27,9 +28,15 @@ function App() {
                   <Route   path="/login">
                           <Login></Login>
                   </Route>
+
                   <PrivateRoute path="/service/:_id">
-                 <ServiceDetail></ServiceDetail>
-              </PrivateRoute>
+                    <ServiceDetail></ServiceDetail>
+                  </PrivateRoute>
+
+                   <Route path="/myorders">
+                      <MyOrders></MyOrders>
+                   </Route>
+                   
                   <Route path="*">
                     <NotFound></NotFound>
                   </Route>
