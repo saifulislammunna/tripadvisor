@@ -3,8 +3,10 @@ import { useForm } from 'react-hook-form';
 import useAuth from '../../hooks/useAuth';
 import { clearTheCart, getStoredCart } from '../../utilities/fakedb';
 
-const Shipping = () => {
-    const { register, handleSubmit,/* reset,  */  formState: { errors } } = useForm();
+const Shipping = (props) => {
+    /* const { name } = props.service; */
+
+    const { register, handleSubmit,reset,   formState: { errors } } = useForm();
     const {user} = useAuth();
     const onSubmit = data => {
         
@@ -24,7 +26,7 @@ const Shipping = () => {
             if(result.insertedId){
                     alert('Order proccessed successfully')
                     clearTheCart();
-                    /* reset(); */
+                    reset();
             }
         })
 
@@ -44,6 +46,7 @@ const Shipping = () => {
       <input type="submit" />
     </form>
         </div>
+        <button onClick={() => props.handleAddToCart(props.product)} >Place Order</button>
         </div>
     );
 };
