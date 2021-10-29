@@ -1,8 +1,8 @@
 import React from 'react';
 import {Button,CardGroup,Card} from 'react-bootstrap';
  
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInfo } from '@fortawesome/free-solid-svg-icons';
+/* import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInfo } from '@fortawesome/free-solid-svg-icons'; */
 import './Service.css'
 import { Link } from 'react-router-dom';
 
@@ -18,14 +18,14 @@ const Service = (props) => {
               {/* card group added */}
             <CardGroup >
   <Card  className=" ">
-    <Card.Img variant="top" src={img} className="  p-5"  width="450" height="350" />
+    <Card.Img variant="top" src={img} className="  p-5"  width="400" height="300" />
     <Card.Body>
       <Card.Title className="fs-2">   {name}</Card.Title>
        
       < p className="text-start"> {description}</p>
       <div>
 
-       <Link  className="link" to={url}><Button> <FontAwesomeIcon icon={faInfo } /> Detail</Button></Link>
+       <Link  className="link" to={url}><Button> {/* <FontAwesomeIcon icon={faInfo } />  */}Book Now</Button></Link>
       </div>
     </Card.Body>
       
