@@ -20,7 +20,7 @@ const Hotel = (props) => {
               {/* card group added */}
             <CardGroup >
   <Card  className=" ">
-    <Card.Img variant="top" /* ref={imgRef} */ src={thumbnailUrl} className="  p-5"  width="400" height="300" />
+    <Card.Img variant="top" /* ref={imgRef} */ src={thumbnailUrl}   width="400" height="300" />
     <Card.Body>
       <Card.Title className="fs-2"  >   {title}</Card.Title>
        

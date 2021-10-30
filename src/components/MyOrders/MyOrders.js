@@ -1,5 +1,7 @@
  
  import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
+import useAuth from '../../hooks/useAuth';
  
  const MyOrders = () => {
     const [services, setServices] = useState([]);
@@ -27,6 +29,13 @@
            
         })
     };
+    const { isLoading} = useAuth();
+    /* console.log(user); */
+    
+    if(isLoading){
+        return <Spinner animation="border" variant="danger"/>
+    }
+
 
      return (
          <div>
