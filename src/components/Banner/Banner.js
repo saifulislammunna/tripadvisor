@@ -15,9 +15,9 @@ const Banner = () => {
     />
 
     <Carousel.Caption>
-      <h3 className="fw-bolder" >learn bengali</h3>
-      <p className="fw-bolder">LEARNING BENGALI: FROM BANGLA BEGINNER TO ADVANCED LEARNER</p>
-      <Button className="btn btn-primary">Learn bengali</Button>
+      <h3 className="fw-bolder" >longest sea beach,Cox's Bazar</h3>
+       
+      <Button className="btn btn-primary">Get bengaladesh</Button>
     </Carousel.Caption>
   </Carousel.Item>
                 <Carousel.Item>
@@ -27,9 +27,9 @@ const Banner = () => {
                  alt="Second slide" width="500" height="400" 
                  />
                  <Carousel.Caption>
-                  <h3 className="text-dark">learn arabic</h3>
-                   <p className="text-dark fw-bolder">This Arabic course contains 100+ Arabic lessons that cover most Arabic grammar and Arabic morphology topics needed to help you learn Arabic quickly.</p>
-                   <Button  className="btn btn-primary" >Learn Arabic</Button>
+                  <h3 className="">Eiffel tower and Paris city</h3>
+                   
+                   <Button  className="btn btn-primary" >Get France</Button>
                  </Carousel.Caption>
                  </Carousel.Item>
                  <Carousel.Item>
@@ -40,9 +40,9 @@ const Banner = () => {
                   />
 
     <Carousel.Caption>
-      <h3 className="fw-bolder">best english courses</h3>
-      <p className="fw-bolder">improve your skills through our high-quality courses and resources – all designed for adult language learners.</p>
-      <Button  className="btn btn-primary" >Learn  English</Button>
+      <h3 className="fw-bolder">The Great Wall of Jinshan Mountains in the Cloud-Sea</h3>
+    
+      <Button  className="btn btn-primary" >Get China</Button>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -53,9 +53,9 @@ const Banner = () => {
     />
 
     <Carousel.Caption>
-      <h3 className="text-dark fw-bolder">learn Chinese</h3>
-      <p className="text-dark fw-bolder">LEARNING Chinese: FROM Chinese BEGINNER TO ADVANCED LEARNER</p>
-      <Button  className="btn btn-primary" >Learn Chinese  </Button>
+      <h3 className="  fw-bolder">View of Colosseum in Rome and morning sun Italy Europe</h3>
+       
+      <Button  className="btn btn-primary" >Get  Italy  </Button>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>

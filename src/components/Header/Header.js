@@ -17,11 +17,12 @@ const Header = () => {
     return (
        
               <>
-  <Navbar bg="white" sticky="top" collapseOnSelect expand="lg"  variant="dark">
+  <Navbar bg="dark" sticky="top" collapseOnSelect expand="lg"  variant="dark">
     <Container>
     
+    <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end">
-    <Nav.Link className="home  "  as={Link}  to="/home">Home</Nav.Link>
+    <Nav.Link className="home"  as={Link}  to="/home">Home</Nav.Link>
      
     {
         user.email ? <Button   onClick={logOut} className="log-out"  >Log out</Button>

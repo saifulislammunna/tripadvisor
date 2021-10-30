@@ -1,0 +1,10 @@
+.home{
+    color: white !important;
+    font-size: 25px;
+    text-decoration: none;
+}
+.home:hover{
+     
+    font-size: 30px;
+    
+}
