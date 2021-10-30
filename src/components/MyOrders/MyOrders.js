@@ -86,7 +86,7 @@ const MyOrders = () => { */
      return (
          <div>
              <h1>This is myorders</h1>
-             <h1>This is manage order</h1>
+           
             {
                 services.map(service => <div key={service._id}>
                     <h3>{service.name}</h3>

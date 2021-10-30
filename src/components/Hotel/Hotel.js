@@ -3,14 +3,14 @@ import {Button,CardGroup,Card} from 'react-bootstrap';
  
 /* import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfo } from '@fortawesome/free-solid-svg-icons'; */
-import './Service.css'
-import { Link } from 'react-router-dom';
+import './Hotel.css';
+ 
 
 
-/* service component */
-const Service = (props) => {
-    const {img,name,description,_id } = props.service;
-    const url = `/services/${_id}`;
+/* Hotel component */
+const Hotel = (props) => {
+    const {thumbnailUrl,title } = props.hotel;
+     
      
     return (
        
@@ -20,14 +20,14 @@ const Service = (props) => {
               {/* card group added */}
             <CardGroup >
   <Card  className=" ">
-    <Card.Img variant="top" /* ref={imgRef} */ src={img} className="  p-5"  width="400" height="300" />
+    <Card.Img variant="top" /* ref={imgRef} */ src={thumbnailUrl} className="  p-5"  width="400" height="300" />
     <Card.Body>
-      <Card.Title className="fs-2"  >   {name}</Card.Title>
+      <Card.Title className="fs-2"  >   {title}</Card.Title>
        
-      < p className="text-start" > {description}</p>
+     {/*  < p className="text-start" > {description}</p> */}
       <div>
 
-       <Link  className="link" to={url}><Button  > {/* <FontAwesomeIcon icon={faInfo } />  */}Book Now</Button></Link>
+        <Button  > {/* <FontAwesomeIcon icon={faInfo } />  */}Book Now</Button> 
       </div>
     </Card.Body>
       
@@ -44,4 +44,4 @@ const Service = (props) => {
     );
 };
 /* exporting service component */
-export default Service;
+export default Hotel;

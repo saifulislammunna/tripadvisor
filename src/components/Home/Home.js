@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import AllHotel from '../AllHotel/AllHotel';
+import AllNextTrip from '../AllNextTrip/AllNextTrip';
 /* import useCart from '../../hooks/useCart';
 import { addToDb } from '../../utilities/fakedb'; */ 
 import Service from '../Service/Service';
@@ -39,7 +41,7 @@ const Home = () => {
   }  */
     return (
         <div >
-         
+         <h1 className="text-start p-3">Destinations Travel lovers</h1>
             
          <div className="service-container p-5">
          {
@@ -53,6 +55,22 @@ const Home = () => {
              }
 
          </div>
+        <div>
+        <div className="p-5">
+             
+             <AllHotel></AllHotel>
+
+         </div>
+        </div>
+        <div>
+            <h2 className="text-start ps-3">Dream Your Next Trip</h2>
+        <h4 className="text-start ps-3"> Weekend getaways</h4>
+        <div className="p-5">
+             
+             <AllNextTrip></AllNextTrip>
+
+         </div>
+        </div>
         </div>
     );
 };
