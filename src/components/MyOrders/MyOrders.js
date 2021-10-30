@@ -39,7 +39,7 @@ import useAuth from '../../hooks/useAuth';
 
      return (
          <div>
-             <h1>This is myorders</h1>
+             <h1>  My orders</h1>
            
             {
                 services.map(service => <div key={service._id}>
