@@ -1,5 +1,5 @@
 // use local storage as your db for now
-const addToDb = id => {
+/* const addToDb = id => {
     const exists = getDb();
     let shopping_cart = {};
     if (!exists) {
@@ -45,4 +45,4 @@ const addToDb = id => {
   }
   
   export { addToDb, removeFromDb , clearTheCart, getStoredCart }
-  
+   */

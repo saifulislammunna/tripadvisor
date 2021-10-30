@@ -11,8 +11,8 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import ServiceDetail from './components/ServiceDetail/ServiceDetail';
 import AuthProvider from './context/AuthProvider';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import AddaNewService from './components/AddaNewService/AddaNewService';
-import ManageAllOrders from './components/ManageAllOrders/ManageAllOrders';
+ import ManageAllOrders from './components/ManageAllOrders/ManageAllOrders';
+import AddService from './components/AddService/AddService';
 
 
 function App() {
@@ -46,8 +46,8 @@ function App() {
                         <ManageAllOrders></ManageAllOrders>
                    </Route>
 
-                   <Route path="/addanewservice">
-                       <AddaNewService></AddaNewService>
+                   <Route path="/addservice">
+                       <AddService></AddService>
                    </Route>
 
                   <Route path="*">

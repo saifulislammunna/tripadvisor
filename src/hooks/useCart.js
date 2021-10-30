@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react"
+/* import { useEffect, useState } from "react"
 import { getStoredCart } from "../utilities/fakedb";
- /* products dependency kea shorai felci */
+  
 const useCart = () => {
     const [cart,setCart] = useState([]);
 
 
-    /* mongodb tea data pathao */
+     
     useEffect(() => {
         const savedCart = getStoredCart();
-        /* console.log(savedCart); */
+        
          const keys = Object.keys(savedCart);
          
          
@@ -28,7 +28,7 @@ const useCart = () => {
                     const addedProduct = products.find(product => product.key === key);
                    
                     if(addedProduct){
-                        // set quantity
+                        
                         const quantity = savedCart[key];
                         
                         addedProduct.quantity = quantity;
@@ -47,4 +47,4 @@ const useCart = () => {
     return[cart,setCart];
 }
 
-export default useCart;
+export default useCart; */
