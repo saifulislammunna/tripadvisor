@@ -49,7 +49,7 @@ const Home = () => {
   }  */
     return (
         <div >
-         <h1 className="text-start p-3">Destinations Travel lovers</h1>
+         <h1 className="text-start p-5">Destinations Travel lovers</h1>
             
          <div className="service-container p-5">
          {
@@ -65,14 +65,15 @@ const Home = () => {
          </div>
         <div>
         <div className="p-5">
-             
+        <h1 className="text-start p-3">Cool Plus stays</h1>
+                <p className="text-start  ps-3 fs-5">Where Tripadvisor Plus members are staying and saving</p>
              <AllHotel></AllHotel>
 
          </div>
         </div>
-        <div>
+        <div className="p-5">
             <h2 className="text-start ps-3">Dream Your Next Trip</h2>
-        <h4 className="text-start ps-3"> Weekend getaways</h4>
+        <p className="text-start ps-3 fs-5"> Weekend getaways</p>
         <div className="p-5">
              
              <AllNextTrip></AllNextTrip>

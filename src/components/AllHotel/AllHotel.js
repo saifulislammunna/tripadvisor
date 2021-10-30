@@ -11,8 +11,7 @@ const AllHotel = () => {
     },[])
     return (
         <div>
-            <h1 className="text-start p-3">Cool Plus stays</h1>
-                <p className="text-start">Where Tripadvisor Plus members are staying and saving</p>
+            
             <div className="service-container p-5">
             {
                   hotels.map( hotel => <Hotel
