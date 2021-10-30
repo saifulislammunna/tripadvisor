@@ -19,7 +19,9 @@ const Header = () => {
               <>
   <Navbar bg="dark" sticky="top" collapseOnSelect expand="lg"  variant="dark">
     <Container>
-    
+    <Navbar.Text className=" text-white">
+         <h3> TripAdvisor.</h3>
+      </Navbar.Text>
     <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end">
     <Nav.Link className="home"  as={Link}  to="/home">Home</Nav.Link>
