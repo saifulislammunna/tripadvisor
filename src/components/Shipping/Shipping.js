@@ -26,6 +26,7 @@ const Shipping = (props) => {
             if(result.insertedId){
                     alert('Order proccessed successfully')
                     clearTheCart();
+                     
                     reset();
             }
         })
