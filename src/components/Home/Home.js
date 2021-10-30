@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
+import useAuth from '../../hooks/useAuth';
 import AllHotel from '../AllHotel/AllHotel';
 import AllNextTrip from '../AllNextTrip/AllNextTrip';
 /* import useCart from '../../hooks/useCart';
@@ -10,6 +12,7 @@ import './Home.css';
 
 /* Home Component */
 const Home = () => {
+    
     const [ services, setServices] = useState([]);
     /* const [cart,setCart] = useCart(); */
     useEffect(()=>{
@@ -17,7 +20,12 @@ const Home = () => {
       .then(res => res.json())
       .then(data => setServices(data));
     },[])
-
+    const { isLoading} = useAuth();
+    /* console.log(user); */
+    
+    if(isLoading){
+        return <Spinner animation="border" variant="danger"/>
+    }
 
         // add to my orders
     /* const handleAddToCart = (product) => {
