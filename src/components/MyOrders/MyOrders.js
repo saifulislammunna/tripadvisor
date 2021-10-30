@@ -35,7 +35,7 @@
             {
                 services.map(service => <div key={service._id}>
                     <h3>{service.name}</h3>
-                    <button onClick={() => handleDelete(service._id)} >Delete</button>
+                    <button className="btn-danger rounded" onClick={() => handleDelete(service._id)} >Delete</button>
 
                 </div>)
             }

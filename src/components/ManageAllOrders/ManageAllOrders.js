@@ -15,8 +15,9 @@ const ManageAllOrders = () => {
           < p  className="text-dark  ">
        
            {user.displayName}  
-             {user.email}
+            
           </p>
+          <p> {user.email}</p>
          
              </div>
         </div>
