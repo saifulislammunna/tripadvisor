@@ -29,10 +29,10 @@ const Login = ( ) => {
     return (
         <div className="mx-5">
             <div className="p-3">   
-                <div  className="d-flex   ">
+                <div  className="d-flex justify-content-center align-items-center   ">
                   <h5 className="fs-5">  Log in With</h5>
                   </div>
-               <div  className=" d-flex toggle-btn">
+               <div  className=" d-flex justify-content-center align-items-center toggle-btn">
 
                <Button   onClick = {handleGoogleLogin}
                  className="btn"
