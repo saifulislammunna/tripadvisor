@@ -44,7 +44,7 @@ const Shipping = (props) => {
       <input  defaultValue=" " placeholder="Address" {...register("address")} />
       <input placeholder="city" defaultValue=" " {...register("city")} />
       <input placeholder="phone number" defaultValue=" " {...register("phone")} />
-      <input type="submit" />
+      <input type="submit"/> 
     </form>
         </div>
        {/*  <button onClick={() => props.handleAddToCart(props.product)} >Place Order</button> */}
