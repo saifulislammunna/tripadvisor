@@ -13,6 +13,7 @@ import AuthProvider from './context/AuthProvider';
 import 'bootstrap/dist/css/bootstrap.min.css';
  import ManageAllOrders from './components/ManageAllOrders/ManageAllOrders';
 import AddService from './components/AddService/AddService';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
                     <NotFound></NotFound>
                   </Route>
             </Switch>
+            <Footer></Footer>
           </Router>
            
         </AuthProvider>
