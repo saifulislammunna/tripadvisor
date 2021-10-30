@@ -33,26 +33,29 @@ const ServiceDetail = ( ) => {
      
     return (
         <div className="service-detail">
-            <Shipping></Shipping>
+            
             
            <div className="service-img p-3">
             <img src={service.img}  alt="" />
             </div>
            
            <div className="d-flex p-3 selected-item align-items-center justify-content-center">
-                      <div className=" selected-item  d-flex  align-items-center      justify-content-center p-5">
+                      <div className=" selected-item   p-5">
          
              
                        <h1 className="pb-2 ">{ service.name} </h1>
                            <p className="p-2 ">{service.description}</p>
-             
+                           <Button   className="btn   ">
+                  
+                  <span className="  "> Book Now</span></Button> 
                        </div >
             
-                        <Button   className="btn  rounded-pill btn">
-                  
-                 <span className="p-2 "> Place Order</span></Button> 
+                
            </div>
             
+            <div>
+            <Shipping></Shipping>
+            </div>
            
          </div>
      
