@@ -1,4 +1,4 @@
-/* import { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { getStoredCart } from "../utilities/fakedb";
   
 const useCart = () => {
@@ -47,4 +47,4 @@ const useCart = () => {
     return[cart,setCart];
 }
 
-export default useCart; */
+export default useCart;

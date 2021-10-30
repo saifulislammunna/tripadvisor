@@ -10,6 +10,7 @@ const ManageAllOrders = () => {
      },[]) */
     return (
         <div>
+            <h1>This is manage all orders</h1>
             {/* <h1>This is manage order</h1>
             {
                 services.map(service => <div key={service._id}>
