@@ -31,7 +31,7 @@ const Header = () => {
         :
         <Nav.Link className="home  "  as={Link}  to="/login">Log in</Nav.Link>}
     {
-        user.email ? <Nav.Link className="home  "  as={Link}  to="/myorders">My Orders</Nav.Link> : ''}
+        user.email ? <Nav.Link className="home  "  as={Link}  to="/orders">My Orders</Nav.Link> : ''}
          
     {
         user.email ? <Nav.Link className="home  "  as={Link}  to="/manageallorders">Manage All Orders</Nav.Link> : ''}

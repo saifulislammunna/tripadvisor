@@ -14,7 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
  import ManageAllOrders from './components/ManageAllOrders/ManageAllOrders';
 import AddService from './components/AddService/AddService';
 import Footer from './components/Footer/Footer';
-
+ 
 
 function App() {
   return (
@@ -39,9 +39,11 @@ function App() {
                     <ServiceDetail></ServiceDetail>
                   </PrivateRoute>
 
-                   <Route path="/myorders">
+                   <Route path="/orders">
                       <MyOrders></MyOrders>
                    </Route>
+                      
+                 
                       
                    <Route path="/manageallorders">
                         <ManageAllOrders></ManageAllOrders>

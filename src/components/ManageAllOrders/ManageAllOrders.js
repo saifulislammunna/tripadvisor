@@ -16,7 +16,7 @@ const ManageAllOrders = () => {
           < p  className="text-dark  ">
        
         {/*    {user.displayName}   */}
-            
+            <h1>This is manage order</h1>
           </p>
           <p> {/* {user.email} */}</p>
          
