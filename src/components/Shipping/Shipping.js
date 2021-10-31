@@ -47,6 +47,7 @@ const Shipping = (props) => {
       <input type="submit"/> 
     </form>
         </div>
+     
        {/*  <button onClick={() => props.handleAddToCart(props.product)} >Place Order</button> */}
         </div>
     );

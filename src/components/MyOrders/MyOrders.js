@@ -40,7 +40,7 @@
                 orders.map(order => <div key={order._id}>
                     <h3>Name:{order.name}</h3>
                     <div><p>Order Id:{order._id}</p></div>
-                    <p>Status : Pending..</p>
+                    <p>Status : Pending.. <button className="btn-primary rounded">Update</button></p>
                      <button className="btn-danger rounded" onClick={() => handleDelete(order._id)} >Delete</button> 
                      
                 </div>)

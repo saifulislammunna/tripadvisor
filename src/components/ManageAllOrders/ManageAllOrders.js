@@ -1,25 +1,27 @@
-import React from 'react';
-import useAuth from '../../hooks/useAuth';
-
+import React, { useEffect, useState } from 'react';
+ 
 const ManageAllOrders = () => {
-    /* const {user } = useAuth();
-     */
+    const [orders, setOrders] = useState([]);
+  
+
+    useEffect(() => {
+        fetch('https://afternoon-wave-38333.herokuapp.com/orders')
+        .then(res => res.json())
+        .then(data => setOrders(data))
+     },[]);
      
     return (
         <div>
              
              <div>
-              {/*  {
-                   user.email? <h1>All Users</h1> : ''
-               } */}
-          
-          < p  className="text-dark  ">
-       
-        {/*    {user.displayName}   */}
-            <h1>This is manage order</h1>
-          </p>
-          <p> {/* {user.email} */}</p>
-         
+             {
+                orders.map(order => <div key={order._id} className="d-flex justify-content-center align-items-center">
+                    <h3 className="p-2">UserName:{order.name}</h3>
+                     <p className="p-3">Order Id:{order._id}</p> 
+                     <p>Status : Pending.. <button className="btn-primary rounded">Update</button></p>
+                    
+                </div>)
+            }
              </div>
         </div>
     );
