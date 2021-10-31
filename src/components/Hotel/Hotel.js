@@ -9,7 +9,7 @@ import './Hotel.css';
 
 /* Hotel component */
 const Hotel = (props) => {
-    const {thumbnailUrl,title } = props.hotel;
+    const {thumbnailUrl,title,description } = props.hotel;
      
      
     return (
@@ -24,7 +24,7 @@ const Hotel = (props) => {
     <Card.Body>
       <Card.Title className="fs-2"  >   {title}</Card.Title>
        
-     {/*  < p className="text-start" > {description}</p> */}
+       < p className="text-start" > {description}</p>  
       <div>
 
         <Button  > {/* <FontAwesomeIcon icon={faInfo } />  */}Book Now</Button> 
