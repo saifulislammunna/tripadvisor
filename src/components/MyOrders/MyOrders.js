@@ -23,7 +23,7 @@
             console.log(data); 
            if(data.deletedCount){
                 alert('Are you sure')
-                const remaining = orders.filter(service => service._id !== _id);
+                const remaining = orders.filter(service => service._id === _id);
                 setOrders(remaining);
  
           } 
