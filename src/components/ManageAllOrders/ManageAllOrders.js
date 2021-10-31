@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
- 
+import './ManageAllOrders.css';
+
 const ManageAllOrders = () => {
     const [orders, setOrders] = useState([]);
   
@@ -33,7 +34,7 @@ const ManageAllOrders = () => {
              
              <div>
              {
-                orders.map(order => <div key={order._id} className="d-flex justify-content-center align-items-center">
+                orders.map(order => <div key={order._id} className="manage-all-Order d-flex justify-content-center align-items-center">
                     <h3 className="p-2">UserName:{order.name}</h3>
                      <p className="p-3">Order Id:{order._id}</p> 
                      <p>Status : <span className="fw-20">Pending..</span> <button className="btn-primary rounded">Update</button>  <Button onClick={() => handleDelete(order._id)} className="btn-danger">Delete User</Button></p>
