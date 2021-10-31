@@ -39,7 +39,7 @@ const Header = () => {
         user.email ? <Nav.Link className="home  "  as={Link}  to="/addservice">Add a New Service</Nav.Link> : ''}
          
        
-      <Navbar.Text  className="text-dark  ">
+      <Navbar.Text  className="text-white ">
        
           {user.displayName}  
         
