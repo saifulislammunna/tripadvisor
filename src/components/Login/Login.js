@@ -30,7 +30,7 @@ const Login = ( ) => {
         <div className="mx-5">
             <div className="p-3">   
                 <div  className="d-flex justify-content-center align-items-center   ">
-                  <h5 className="fs-5 p-5">  Log in With</h5>
+                  <h1  >  Log in With</h1>
                   </div>
                <div  className="p-5 pt-1 d-flex justify-content-center align-items-center toggle-btn">
 
