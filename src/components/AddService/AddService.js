@@ -9,7 +9,7 @@ const AddService = () => {
     const onSubmit = data =>{ 
         console.log(data);
 
-        axios.post('https://afternoon-wave-38333.herokuapp.com/services',data)
+        axios.post('https://polar-lowlands-07923.herokuapp.com/services',data)
         .then(res => {
             console.log(res);
               if(res.data.insertedId){

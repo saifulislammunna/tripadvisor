@@ -13,7 +13,7 @@ const Shipping = (props) => {
         const savedCart = getStoredCart();
         data.order = savedCart;
 
-        fetch('https://afternoon-wave-38333.herokuapp.com/orders', {
+        fetch('https://polar-lowlands-07923.herokuapp.com/orders', {
             method: 'POST',
             headers:{
                 'content-type': 'application/json'
@@ -33,6 +33,10 @@ const Shipping = (props) => {
 
         console.log(data)
     };
+    const onClick = () => {
+        alert('submitting successfully') 
+        reset(); 
+    }
     return (
         <div>
             <div>
@@ -44,7 +48,7 @@ const Shipping = (props) => {
       <input  defaultValue=" " placeholder="Address" {...register("address")} />
       <input placeholder="city" defaultValue=" " {...register("city")} />
       <input placeholder="phone number" defaultValue=" " {...register("phone")} />
-      <input type="submit"/> 
+      <input onClick={onClick} type="submit"/> 
     </form>
         </div>
      

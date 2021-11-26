@@ -5,7 +5,7 @@ const AllNextTrip = () => {
     const [ nextTrips, setNextTrips] = useState([]);
     /* const [cart,setCart] = useCart(); */
     useEffect(()=>{
-      fetch('https://afternoon-wave-38333.herokuapp.com/nextTrip')
+      fetch('https://polar-lowlands-07923.herokuapp.com/nextTrip')
       .then(res => res.json())
       .then(data => setNextTrips(data));
     },[])

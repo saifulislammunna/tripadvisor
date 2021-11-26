@@ -12,7 +12,7 @@ const useCart = () => {
          const keys = Object.keys(savedCart);
          
          
-        fetch('https://afternoon-wave-38333.herokuapp.com/services/byids',{
+        fetch('https://polar-lowlands-07923.herokuapp.com/services/byids',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Table } from 'react-bootstrap';
 import './ManageAllOrders.css';
 
 const ManageAllOrders = () => {
@@ -7,13 +7,13 @@ const ManageAllOrders = () => {
   
 
     useEffect(() => {
-        fetch('https://afternoon-wave-38333.herokuapp.com/orders')
+        fetch('https://polar-lowlands-07923.herokuapp.com/order')
         .then(res => res.json())
         .then(data => setOrders(data))
      },[]);
      
      const handleDelete = _id => {
-        const url =  `https://afternoon-wave-38333.herokuapp.com/orders/${_id}`
+        const url =  `https://polar-lowlands-07923.herokuapp.com/orders/${_id}`
         fetch(url,{
             method: 'DELETE'
         })
@@ -30,20 +30,39 @@ const ManageAllOrders = () => {
         })
     };
     return (
+       
         <div>
-             
-             <div>
-             {
-                orders.map(order => <div key={order._id} className="manage-all-Order d-flex justify-content-center align-items-center">
-                    <h3 className="p-2">UserName : {order.name}</h3>
-                     <p className="p-3">Order Id : {order._id}</p> 
-                     <p>Status : <span className="fw-20">Pending..</span> <button className="btn-primary rounded">Update</button>  <Button onClick={() => handleDelete(order._id)} className="btn-danger">Delete  </Button></p>
-                    
-                    
-                </div>)
-            }
-             </div>
-        </div>
+        <h2>Manage All Orders : {orders.length}</h2>
+        <Table  responsive striped bordered hover>
+<thead>
+<tr>
+   
+  <th>Name</th>
+  <th>Email Address</th>
+  <th>Product Id</th>
+  <th>Deleting Order</th>
+   
+
+</tr>
+</thead>
+<tbody>
+  {orders.map((order)=> (  
+    
+  <tr key={order._id}>
+  
+  <td>{order.name}</td>
+  <td>{order.email}</td>
+  <td>{order._id}</td>
+ 
+  <td><Button  onClick={ () => handleDelete(order._id)} className="bg-danger">Delete</Button></td>
+</tr>))}
+
+
+
+ 
+</tbody>
+</Table>
+    </div>
     );
 };
 
