@@ -1,7 +1,7 @@
   <h1>TripAdvisor</h1>
- <a href="https://github.com/programming-hero-web-course1/tourism-or-delivery-website-client-side-saifulislammunna">trip-advisor-client-side-link</a>
+ <a href="https://github.com/saifulislammunna/tripadvisor.git">trip-advisor-client-side-link</a>
  </br>
- <a href="https://github.com/programming-hero-web-course1/tourism-or-delivery-website-server-side-saifulislammunna">trip-advisor-server-side-link</a>
+ <a href="https://github.com/saifulislammunna/tripadvisor-server.git">trip-advisor-server-side-link</a>
  </br>
  <a href="https://trip-advisor-f6f69.web.app">trip-advisor.web.app</a>
   
